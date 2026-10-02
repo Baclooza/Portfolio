@@ -24,7 +24,12 @@ body{
 #contact-info{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem 0;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
+}
+
+.info-left{
+    justify-self: left;
+}
+
+.info-right{
+    justify-self: right;
 }
