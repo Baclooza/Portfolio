@@ -1,0 +1,30 @@
+body{
+    background-color: #a23bec;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#main{
+    background-color: white;
+    width: 80%;
+    margin: 0 auto;
+    padding: 0 1rem 2rem 1rem;
+}
+
+#header{
+    display: grid;
+    place-items: center;
+}
+
+#header img{
+    max-width: 25%;
+    margin-top: 10px;
+}
+
+#contact-info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 0;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
