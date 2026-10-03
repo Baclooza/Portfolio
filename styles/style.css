@@ -68,14 +68,14 @@ body{
 }
 
 #education-label{
-    display: block;
+    display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
-.edu-left{
+#edu-left{
     justify-self: left;
 }
 
-.edu-right{
+#edu-right{
     justify-self: right;
 }
