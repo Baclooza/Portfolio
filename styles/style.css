@@ -86,11 +86,11 @@ body{
 }
 
 #coursework-left{
-    margin: 0 auto;
+    width: auto;
 }
 
 #coursework-right{
-    margin: 0 auto;
+    width: auto;
 }
 
 /* Skills and Certifacations */
@@ -100,9 +100,24 @@ body{
 }
 
 #skills-left{
-    width: 50%;
+    width: auto;
 }
 
 #skills-right{
-    width: 50%;
+    width: auto;
+}
+
+/* Projects */
+.project-label{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0;
+}
+
+.project-left{
+    justify-self: left;
+}
+
+.project-right{
+    justify-self: right;
 }
