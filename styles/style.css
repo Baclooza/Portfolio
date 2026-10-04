@@ -1,4 +1,4 @@
-/* General Changes */
+ /* General Changes */
 body{
     background-color: #a23bec;
     margin: 0;
@@ -62,7 +62,7 @@ body{
     margin-bottom: 0;
 }
 
-#education p{
+#education p, #education ul{
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -78,4 +78,31 @@ body{
 
 #edu-right{
     justify-self: right;
+}
+
+#coursework{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#coursework-left{
+    margin: 0 auto;
+}
+
+#coursework-right{
+    margin: 0 auto;
+}
+
+/* Skills and Certifacations */
+#skills{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#skills-left{
+    width: 50%;
+}
+
+#skills-right{
+    width: 50%;
 }
