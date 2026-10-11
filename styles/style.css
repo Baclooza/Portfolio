@@ -40,12 +40,12 @@ body{
 /* Contact Info */
 a:hover{
     outline: 2px solid var(--primary);
+    font-size: large;
 }
 
 #contact-info{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    font-size: large;
 }
 
 .info-left{
