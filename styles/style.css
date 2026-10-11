@@ -7,42 +7,75 @@
 body{
     background-color: var(--primary);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
 }
+
+h1{
+    font-size: 2.25rem;
+    font-variant: small-caps;
+    letter-spacing: 0.02em;
+    margin: 0;
+}
+
+h2{
+    font-size: 1.5rem;
+    font-variant: small-caps;
+    letter-spacing: 0.02em;
+    margin: 1.5rem 0 0.25rem 0;
+}
+
+p{
+    margin: 0;
+}
+
+ul{
+    margin: 0;
+}
+
+li::marker{
+    color: var(--primary);
+}
+
+a:hover,
+a:focus{
+    outline: 2px solid var(--primary);
+}
+
 
 #main{
     background-color: var(--secondary);
     width: 90%;
     max-width: 900px;
     margin: 0 auto;
-    padding: 0 1rem 2rem 1rem;
+    padding: 1.5rem 1rem 1.5rem 1rem;
     border-radius: 25px;
 }
 
 /* Header */
 #header{
-    display: grid;
-    place-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #header img{
-    max-width: 25%;
-    margin-top: 10px;
-    margin-bottom: 0;
+    max-width: 30%;
     border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
-#header h1{
+/* Summary */
+#summary h2{
     margin-top: 0;
-    margin-bottom: 0;
-    font-variant: small-caps;
+    text-align: center;
+}
+
+#summary p{
+    text-align: center;
 }
 
 /* Contact Info */
-a:hover{
-    outline: 2px solid var(--primary);
-    font-size: large;
-}
-
 #contact-info{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -55,53 +88,17 @@ a:hover{
 .info-right{
     justify-self: right;
 }
-
-/* Summary */
-#summary h2{
-    margin-bottom: 0;
-    margin-top: 0;
-    font-variant: small-caps;
-}
-
-#summary p{
-    margin-top: 0;
-}
-
+    
 /* Education */
-#education h2{
-    font-variant: small-caps;
-    margin-bottom: 0;
-}
-
-#education p, #education ul{
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
 #education-label{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-#edu-left{
-    justify-self: left;
-}
-
-#edu-right{
-    justify-self: right;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 #coursework{
     display: grid;
     grid-template-columns: 1fr 1fr;
-}
-
-#coursework-left{
-    width: auto;
-}
-
-#coursework-right{
-    width: auto;
 }
 
 /* Skills and Certifacations */
@@ -110,25 +107,34 @@ a:hover{
     grid-template-columns: 1fr 1fr;
 }
 
-#skills-left{
-    width: auto;
-}
-
-#skills-right{
-    width: auto;
-}
-
 /* Projects */
-.project-label{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 0;
+.project-label {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.project-left{
-    justify-self: left;
+#projects li {
+    list-style-type: square;
 }
 
-.project-right{
-    justify-self: right;
-}
+/* Media Query */
+@media (max-width: 600px){
+    #header img{
+        max-width: 60%;
+    }
+
+    #contact-info {
+        grid-template-columns: 1fr;
+    }
+
+    .info-right,
+    .info-left{
+        justify-self: center;
+    }
+
+    #coursework,
+    #skills{
+        grid-template-columns: 1fr;
+    }
+} 
